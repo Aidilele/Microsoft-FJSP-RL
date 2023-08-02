@@ -1,0 +1,67 @@
+{
+  "CommonTrainParas": {
+    "max_episodes": 400000,
+    "random_seed": 0,
+    "dataset": "1005test",
+    "save_info": "GIM6",
+    "reward_type": 3,
+    "render": false,
+    "init_mode": "Circulate",
+    "model_path": "./checkpoints/DuelingDQN/",
+    "train_model": "BI"
+  },
+  "CommonLoadParas": {
+    "load_ep": 0,
+    "load_info": "",
+    "load_reward_type": 3,
+    "load_seed": 0
+  },
+  "ImproveTrainParas": {
+    "ep_max_step": 64,
+    "alpha": 0.00006,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "epsilon": 0.5,
+    "eps_end": 0.0,
+    "eps_dec": 1e-3,
+    "max_size": 5000,
+    "batch_size": 1024,
+    "reward_type": 3
+  },
+  "ImproveLoadParas": {
+    "ope_dim": 7,
+    "gat_hidden_dim": 16,
+    "gat_output_dim": 8,
+    "hidden_layer_num": 3,
+    "hidden_dim": 512,
+    "load_reward_type": 3,
+    "load_ep": 10000,
+    "load_info": "GIM5",
+    "model_path": "./Improve/checkpoints/DuelingDQN/"
+  },
+  "GenerateTrainParas": {
+    "alpha": 0.00006,
+    "gamma": 0.99,
+    "tau": 0.005,
+    "epsilon": 0.0,
+    "eps_end": 0.0,
+    "eps_dec": 1e-3,
+    "max_size": 5000,
+    "batch_size": 1024,
+    "reward_type": 3
+  },
+  "GenerateLoadParas": {
+    "ope_dim": 7,
+    "gat_hidden_dim": 16,
+    "gat_output_dim": 4,
+    "hidden_layer_num": 3,
+    "hidden_dim": 512,
+    "load_reward_type": 3,
+    "load_ep": 0,
+    "load_info": "GIM3",
+    "model_path": "./Generate/checkpoints/DuelingDQN/"
+  }
+}
+
+
+

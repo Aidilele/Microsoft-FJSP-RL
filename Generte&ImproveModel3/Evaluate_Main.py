@@ -1,0 +1,28 @@
+from GIModel import *
+import numpy as np
+
+
+def main():
+    gim = GIM(config_path="./config.json")
+    gim.load()
+    ave_cmax = 0
+    ep_count = 0
+    print_count = 0
+    for episode in range(1,gim.config["CommonTrainParas"]["max_episodes"] + 1):
+        end_cmax = gim.model[gim.config["CommonTrainParas"]["train_model"]](eva_flag=True)
+        ave_cmax += end_cmax
+        ep_count += 1
+        if ep_count % len(gim.ie.graph_list) == 0:
+            ave_cmax = ave_cmax / len(gim.ie.graph_list)
+            gim.summer.add_scalar("EP Cmax ", ave_cmax, print_count)
+            print(
+                "Episode : {} \t\t EP Cmax : {:6.2f}".format(
+                    ep_count,
+                    ave_cmax,
+                ))
+            print_count += 1
+            ave_cmax = 0
+
+
+if __name__ == '__main__':
+    main()
