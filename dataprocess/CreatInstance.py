@@ -117,4 +117,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    print("Instances are created and stored in the \"./data\"")
+    print("Instances are created.")
