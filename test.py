@@ -5,12 +5,11 @@ import random
 import time as time
 
 import gym
-import pandas as pd
 import torch
 import numpy as np
 
 import pynvml
-import PPO_model
+from model import PPO_model
 from fjsp_drl_main.env.load_data import nums_detec
 
 

@@ -1,6 +1,5 @@
 import gym
-import env
-import PPO_model
+from model import PPO_model
 import torch
 import time
 import os

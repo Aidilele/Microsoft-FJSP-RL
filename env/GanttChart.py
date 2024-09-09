@@ -1,10 +1,9 @@
 import matplotlib.pyplot as plt
-from UsefulFunction import get_color, encoding_color_list2str
-from Graph import *
+from utils.UsefulFunction import get_color, encoding_color_list2str
+from env.Graph import *
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
 from PIL import Image
 import io
-import imageio
 
 
 class GanttChart:

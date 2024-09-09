@@ -3,8 +3,8 @@ import torch.nn as nn
 import torch.optim as optim
 import torch.nn.functional as F
 import numpy as np
-from ReplayBuffer import ReplayBuffer
-from GATModel import *
+from model.ReplayBuffer import ReplayBuffer
+from model.GATModel import *
 from torch.utils.tensorboard import SummaryWriter
 
 device = T.device("cuda:0" if T.cuda.is_available() else "cpu")

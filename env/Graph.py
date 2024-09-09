@@ -1,12 +1,8 @@
-import numpy as np
-
-import RawDataProcess
-from Node import *
+from env.Node import *
 import random
 from copy import deepcopy
-import numpy
-from UsefulFunction import check_circle
-from RawDataProcess import single_process
+from utils.UsefulFunction import check_circle
+from dataprocess.RawDataProcess import single_process
 
 
 class FJSPGraph:
@@ -540,7 +536,7 @@ class FJSPGraph:
 
 
 if __name__ == '__main__':
-    file_path = './dataset/0503/5j_3m_001.fjs'
+    file_path = '../dataset/0503/5j_3m_001.fjs'
     for i in range(1):
         graph = FJSPGraph(file_path)
         greedy_solution = [[],

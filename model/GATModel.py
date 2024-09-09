@@ -1,9 +1,8 @@
 import torch
 from torch import nn
-from torch.nn import Identity
 import torch.nn.functional as F
-from Enviroment import *
-from RLModel import Actor
+from env.Enviroment import *
+from model.RLModel import Actor
 from torch.distributions import Categorical
 
 

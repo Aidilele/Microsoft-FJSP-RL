@@ -1,19 +1,13 @@
-import argparse
-from utils import plot_learning_curve, create_directory
-from DuelingDQN import DuelingDQN
-from Enviroment import *
+from model.DuelingDQN import DuelingDQN
+from env.Enviroment import *
 import torch
-import time
 import copy
 import json
 import os
 import random
-import time as time
-import gym
-import pandas as pd
 import numpy as np
 import pynvml
-import PPO_model
+from model import PPO_model
 from fjsp_drl_main.env.load_data import nums_detec
 from fjsp_drl_main.env.fjsp_env import FJSPEnv
 
@@ -103,7 +97,7 @@ def create_generate(file_path='./dataset/1005', model_path="./fjsp_drl_main/mode
     torch.set_printoptions(precision=None, threshold=np.inf, edgeitems=None, linewidth=None, profile=None,
                            sci_mode=False)
     # Load config and init objects
-    with open("./config.json", 'r') as load_f:
+    with open("config.json", 'r') as load_f:
         load_dict = json.load(load_f)
     env_paras = load_dict["env_paras"]
     model_paras = load_dict["model_paras"]

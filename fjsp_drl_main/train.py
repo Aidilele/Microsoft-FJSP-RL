@@ -11,7 +11,7 @@ import torch
 import numpy as np
 from visdom import Visdom
 
-import PPO_model
+from model import PPO_model
 from env.case_generator import CaseGenerator
 from validate import validate, get_validate_env
 

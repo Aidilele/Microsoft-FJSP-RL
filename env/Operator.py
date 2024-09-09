@@ -1,6 +1,6 @@
-from Graph import *
+from env.Graph import *
 from copy import deepcopy
-from GanttChart import GanttChart
+from env.GanttChart import GanttChart
 import random
 import os
 import matplotlib.pyplot as plt
@@ -269,7 +269,7 @@ class GreedyCriticalInsert:
 
 
 if __name__ == '__main__':
-    dir_path = './dataset/1005'
+    dir_path = '../dataset/1005'
     instance = 0
     for file in os.listdir(dir_path)[0:30]:
         file_path = dir_path + '/' + file

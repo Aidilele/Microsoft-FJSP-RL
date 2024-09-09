@@ -1,11 +1,6 @@
-from Graph import *
-import random
-from Graph import *
-import os
-import random
-from Operator import *
+from env.Operator import *
 import test as drl
-from GanttChart import GanttChart
+from env.GanttChart import GanttChart
 
 
 class FJSPEnviroment():
