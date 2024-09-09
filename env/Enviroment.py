@@ -1,5 +1,5 @@
 from env.Operator import *
-import test as drl
+from model import test as drl
 from env.GanttChart import GanttChart
 
 

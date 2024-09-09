@@ -37,7 +37,7 @@ def main():
                            sci_mode=False)
 
     # Load config and init objects
-    with open("./config.json", 'r') as load_f:
+    with open("../config.json", 'r') as load_f:
         load_dict = json.load(load_f)
     env_paras = load_dict["env_paras"]
     model_paras = load_dict["model_paras"]
@@ -56,7 +56,7 @@ def main():
     test_files = os.listdir(data_path)
     test_files.sort(key=lambda x: x[:-4])
     num_ins = len(test_files)
-    mod_files = os.listdir('./fjsp_drl_main/model/')[:]
+    mod_files = os.listdir('../fjsp_drl_main/model/')[:]
     memories = PPO_model.Memory()
     model = PPO_model.PPO(model_paras, train_paras)
     rules = test_paras["rules"]
@@ -64,7 +64,7 @@ def main():
     solutions = []
     # Detect and add models to "rules"
     if "DRL" in rules:
-        for root, ds, fs in os.walk('./fjsp_drl_main/model/'):
+        for root, ds, fs in os.walk('../fjsp_drl_main/model/'):
             for f in fs:
                 if f.endswith('.pt'):
                     rules.append(f)
@@ -81,7 +81,7 @@ def main():
         # Load trained model
         if rule.endswith('.pt'):
             if device.type == 'cuda':
-                model_CKPT = torch.load('./fjsp_drl_main/results/save_10_5.pt')
+                model_CKPT = torch.load('../fjsp_drl_main/results/save_10_5.pt')
                 # model_CKPT = torch.load('./model/' + mod_files[i_rules])
             else:
                 model_CKPT = torch.load('./fjsp_drl_main/model/' + mod_files[i_rules], map_location='cpu')
@@ -208,7 +208,7 @@ def main2(file_path, ins_index):
                            sci_mode=False)
 
     # Load config and init objects
-    with open("./config.json", 'r') as load_f:
+    with open("../config.json", 'r') as load_f:
         load_dict = json.load(load_f)
     env_paras = load_dict["env_paras"]
     model_paras = load_dict["model_paras"]
@@ -230,7 +230,7 @@ def main2(file_path, ins_index):
     test_files = os.listdir(data_path)
     test_files.sort()
     test_files = test_files[:num_ins]
-    mod_files = os.listdir('./fjsp_drl_main/model/')[:]
+    mod_files = os.listdir('../fjsp_drl_main/model/')[:]
 
     memories = PPO_model.Memory()
     model = PPO_model.PPO(model_paras, train_paras)
@@ -239,7 +239,7 @@ def main2(file_path, ins_index):
     solutions = []
     # Detect and add models to "rules"
     if "DRL" in rules:
-        for root, ds, fs in os.walk('./fjsp_drl_main/model/'):
+        for root, ds, fs in os.walk('../fjsp_drl_main/model/'):
             for f in fs:
                 if f.endswith('.pt'):
                     rules.append(f)
@@ -252,7 +252,7 @@ def main2(file_path, ins_index):
         # Load trained model
         if rule.endswith('.pt'):
             if device.type == 'cuda':
-                model_CKPT = torch.load('./fjsp_drl_main/results/save_20_10.pt')
+                model_CKPT = torch.load('../fjsp_drl_main/results/save_20_10.pt')
                 # model_CKPT = torch.load('./model/' + mod_files[i_rules])
             else:
                 model_CKPT = torch.load('./fjsp_drl_main/model/' + mod_files[i_rules], map_location='cpu')
@@ -346,7 +346,7 @@ def main3():
                            sci_mode=False)
 
     # Load config and init objects
-    with open("./config.json", 'r') as load_f:
+    with open("../config.json", 'r') as load_f:
         load_dict = json.load(load_f)
     env_paras = load_dict["env_paras"]
     model_paras = load_dict["model_paras"]
@@ -365,7 +365,7 @@ def main3():
     test_files = os.listdir(data_path)
     test_files.sort(key=lambda x: x[:-4])
     num_ins = len(test_files)
-    mod_files = os.listdir('./fjsp_drl_main/model/')[:]
+    mod_files = os.listdir('../fjsp_drl_main/model/')[:]
     memories = PPO_model.Memory()
     model = PPO_model.PPO(model_paras, train_paras)
     rules = test_paras["rules"]
@@ -373,7 +373,7 @@ def main3():
     solutions = []
     # Detect and add models to "rules"
     if "DRL" in rules:
-        for root, ds, fs in os.walk('./fjsp_drl_main/model/'):
+        for root, ds, fs in os.walk('../fjsp_drl_main/model/'):
             for f in fs:
                 if f.endswith('.pt'):
                     rules.append(f)
@@ -390,7 +390,7 @@ def main3():
         # Load trained model
         if rule.endswith('.pt'):
             if device.type == 'cuda':
-                model_CKPT = torch.load('./fjsp_drl_main/results/save_20_10.pt')
+                model_CKPT = torch.load('../fjsp_drl_main/results/save_20_10.pt')
                 # model_CKPT = torch.load('./model/' + mod_files[i_rules])
             else:
                 model_CKPT = torch.load('./fjsp_drl_main/model/' + mod_files[i_rules], map_location='cpu')

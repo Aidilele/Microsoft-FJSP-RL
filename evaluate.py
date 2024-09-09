@@ -27,17 +27,12 @@ for env_index in range(len(improve_env.graph_list)):
         images.append(image)
 
     width, height = images[0].size
-    fourcc = cv2.VideoWriter_fourcc(*'mp4v')  # 指定编码器
+    fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     video = cv2.VideoWriter('render_result/output_' + str(env_index) + '.mp4', fourcc, 2, (width, height))
     for img in images:
-        # 将 PIL 图像转换为 numpy 数组
         frame = np.array(img)
-        # 将 RGB 转换为 BGR（OpenCV 使用 BGR）
         frame = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
-        # 写入视频
         video.write(frame)
-
-    # 释放 VideoWriter 对象
     video.release()
 
     print(agent.improve_env.graph.makespan())

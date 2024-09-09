@@ -46,8 +46,8 @@ class GanttChart:
 
     def plot(self):
 
-        # plt.rcParams['font.sans-serif'] = ['SimHei']  # 显示中文标签
-        plt.rcParams['axes.unicode_minus'] = False  # 显示中文标签
+
+        plt.rcParams['axes.unicode_minus'] = False
         struct_data = self.get_gantt_struct_data()
 
         plt_list = []
@@ -63,7 +63,7 @@ class GanttChart:
             plt.barh(y=k[2], height=0.8, width=v[2], left=v[0], edgecolor="black", color=self.color[k[0]])
             # plt.text(v[0], 2 * k[2], str(k[0]) + "-" + str(k[1]), fontdict=self.font_style_task)
 
-        ylabels = ['', ]  # 生成y轴标签
+        ylabels = ['', ]
         for machine_index in range(self.graph.machine_num):
             ylabels.append('Machine' + str(machine_index))
 
@@ -88,9 +88,9 @@ def main_gantt_chart(graph):
 
 
 if __name__ == '__main__':
-    file_path = './dataset/1005/3128_10j_5m.fjs'  # 此处输入对应instance的文件路径
+    file_path = './dataset/1005/3128_10j_5m.fjs'
     graph = FJSPGraph(file_path)
-    solution = 0  # 此处将要画的solution复制过来
+    solution = 0
     graph.apply_solution(solution)
     graph.cal_sw_tw()
     cmax = graph.makespan()
