@@ -1,4 +1,4 @@
-# Simultaneous Generation and Improvement:A Unified RL Paradigm for FJSP Optimization
+# Simultaneous Generation and Improvement: A Unified RL Paradigm for FJSP Optimization
 
 ---
 
