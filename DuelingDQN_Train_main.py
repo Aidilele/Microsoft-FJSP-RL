@@ -21,7 +21,7 @@ def main():
     train_paras = load_dict['TrainParas']
     load_model_paras = load_dict['LoadModelParas']
 
-    # 加载本次训练参数
+    # load training parameters
     max_episodes = train_paras['max_episodes']
     ep_max_step = train_paras['ep_max_step']
     random_seed = train_paras['random_seed']
@@ -43,7 +43,7 @@ def main():
     save_model_info['reward_type'] = reward_type
     save_model_info['info'] = save_info
 
-    # 加载预训练模型参数
+    # load pretrain parameters
     ope_dim = load_model_paras['ope_dim']
     gat_hidden_dim = load_model_paras['gat_hidden_dim']
     gat_output_dim = load_model_paras['gat_output_dim']

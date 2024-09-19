@@ -18,7 +18,7 @@ for env_index in range(len(improve_env.graph_list)):
             schedule = agent.improve(solution, improve_times=ope_num, env_index=env_index)
         else:
             schedule = agent.improve(solution, improve_times=0, env_index=env_index)
-        # graph = copy.deepcopy(improve_env.graph_list[0])  # 此处将要画的solution复制过来
+        # graph = copy.deepcopy(improve_env.graph_list[0])
         # graph.apply_solution(solution)
         # graph.cal_sw_tw()
         # cmax = graph.makespan()
