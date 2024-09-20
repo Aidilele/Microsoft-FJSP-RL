@@ -3,7 +3,7 @@ from copy import deepcopy
 import numpy as np
 
 
-class GIModel():
+class GIModel:
     def __init__(self, improve_env, generate_env, improve_model, generate_model):
         self.improve_env = improve_env
         self.improve_model = improve_model

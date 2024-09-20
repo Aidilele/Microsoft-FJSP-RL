@@ -33,3 +33,14 @@ Training model by running `./DuelingDQN_Train_main.py`. And all of the training 
 All of the training data will be saved in `./runs`.
 
 Evaluating the model by running `./evaluate.py`. Experiments Ganttchart visualization will be saved in `./render_result`.
+
+## FJSP simulator
+
+Users can  implemente their customize algorithm by using our the FJSP environment.All of the dependent files are included in directory `./env` and `./utils`.
+You can create a FSJP environment by running:
+
+    dataset = '1005'    #the dataset must be located in ./dataset
+    env = FJSPEnviroment(dir_path='./dataset/' + dataset)
+    env.reset()
+
+more functions about simulator can find in `./env/Environment.py`
