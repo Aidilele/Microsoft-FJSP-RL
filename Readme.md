@@ -29,14 +29,14 @@ Creating the scripts FSJP instance data by running `./dataprocess/CreatInstance`
         for each_case_index in range(batch_size):
             case.get_case(each_case_index)
 
-Training model by running `./DuelingDQN_Train_main.py`. And all of the training parameters can be modified in file `./config.json`.
-All of the training data will be saved in `./runs`.
+Training model by running `./DuelingDQN_Train_main.py`. And all the training parameters can be modified in file `./config.json`.
+All the training data will be saved in `./runs`.
 
 Evaluating the model by running `./evaluate.py`. Experiments Ganttchart visualization will be saved in `./render_result`.
 
 ## FJSP simulator
 
-Users can  implemente their customize algorithm by using our the FJSP environment.All of the dependent files are included in directory `./env` and `./utils`.
+Users can  implemente their customize algorithm by using our the FJSP environment. All the dependent files are included in directory `./env` and `./utils`.
 You can create a FSJP environment by running:
 
     dataset = '1005'    #the dataset must be located in ./dataset
