@@ -1,5 +1,5 @@
 import argparse
-from utils import create_directory
+from utils.utils import create_directory
 from model.DuelingDQN import DuelingDQN
 from env.Enviroment import *
 from torch.utils.tensorboard import SummaryWriter
