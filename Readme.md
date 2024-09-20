@@ -32,4 +32,4 @@ Creating the scripts FSJP instance data by running `./dataprocess/CreatInstance`
 Training model by running `./DuelingDQN_Train_main.py`. And all of the parameters be modified in file `./config.json`.
 All of the training data will be saved in `./runs`.
 
-Evaluating the model by running `./evaluate.py`. Experiments result will be saved in `./render_result`.
+Evaluating the model by running `./evaluate.py`. Experiments Ganttchart visualization will be saved in `./render_result`.
